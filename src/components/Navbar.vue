@@ -1,19 +1,4 @@
 <template>
-    <!-- <div id="nav">
-      <router-link to="/" tag="button">Home</router-link> |
-      <router-link to="/users" tag="button">Users</router-link> |
-      <router-link to="/gunung" tag="button">Gunung</router-link>
-   </div> -->
-   <!-- <-- <div class="flex md:order-2">
-      <div v-if="isAuthenticated">
-      <button @click="logout" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-3 border border-blue-500 hover:border-transparent rounded">Logout</button>
-    </div>
-    <div v-else>
-  <a href="/login" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-3 border border-blue-500 hover:border-transparent rounded">
-    Login
-  </a>
-    </div> --> 
-    
     <body class="bg-blue-500">
       <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
           <a class="text-3xl font-bold leading-none" href="#">
@@ -42,20 +27,28 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                   </svg>
               </li>
-              <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">About</a></li>
+        
+              <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/cart">keranjang</a></li>
               <li class="text-gray-300">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                   </svg>
               </li>
-              <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li>
-              <li class="text-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                  </svg>
-              </li>
-              <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
+              <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/contact">Contact</a></li>
           </ul>
+
+          <!-- <div class="hidden xl:flex items-right text-gray-600 space-x-10 items-right">
+                    <a class="flex items-center hover:text-gray-900" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span class="absolute flex ml-4 -mt-5">
+                            <span class="h-3 w-3 animate-ping absolute inline-flex rounded-full bg-pink-500 opacity-75"></span>
+                            <span class="h-3 w-3 relative inline-flex rounded-full bg-pink-600"></span>
+                        </span>
+                    </a>
+                </div> -->
+          
       <div v-if="isAuthenticated">
         <button @click="logout" class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-300 hover:bg-gray-200 rounded-xl">Logout</button>
         </div>

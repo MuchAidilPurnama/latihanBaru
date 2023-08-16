@@ -5,7 +5,11 @@ import Register from "../views/Register.vue";
 import store from "../store";
 import Product from "../views/Product.vue";
 import Carousel from "../views/Carousel.vue";
-import Menyatu from "../components/Menyatu.vue"
+import Menyatu from "../components/Menyatu.vue";
+import Cart from "../views/Cart.vue";
+import SingleProduct from "../views/SingleProduct.vue";
+import Checkout from "../views/Checkout.vue";
+import Contact from "../views/Contact.vue"
 
 const routes = [
     {
@@ -39,6 +43,30 @@ const routes = [
         component: Menyatu,
         meta: { requiresLogin: true },
     },
+    {
+        path: "/cart",
+        name: "Cart",
+        component: Cart,
+        meta: { requiresLogin: true },
+    },
+    {
+        path: "/detail",
+        name: "SingleProduct",
+        component: SingleProduct,
+        meta: { requiresLogin: true },
+    },
+    {
+        path: "/checkout",
+        name: "Checkout",
+        component: Checkout,
+        meta: { requiresLogin: true },
+    },
+    {
+        path: "/contact",
+        name: "Contact",
+        component: Contact,
+    },
+
 ];
 
 const router = createRouter({
