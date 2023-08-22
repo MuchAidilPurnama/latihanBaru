@@ -7,8 +7,8 @@
         <p class="text-sm mt-4 text-[#002D74]">If you have an account, please login</p>
         <form  @submit.prevent="performLogin">
           <div>
-            <label class="block text-gray-700">Username</label>
-            <input v-model="username" type="text" name="name" placeholder="Enter Username Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" required>
+            <label class="block text-gray-700">Email</label>
+            <input v-model="email" type="text" name="name" placeholder="Enter Email Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" required>
           </div>
   
           <div class="mt-4">
@@ -57,7 +57,7 @@ import { mapActions } from 'vuex';
 export default {
     auth() {
         return {
-            username: '',
+            email: '',
             password: '',
         };
     },
@@ -65,7 +65,7 @@ export default {
         ...mapActions('auth', ['login']),
         async performLogin() {
             const credentials = {
-                username: this.username,
+                email: this.email,
                 password: this.password,
             };
             const success = await this.login(credentials);

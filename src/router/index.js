@@ -9,7 +9,9 @@ import Menyatu from "../components/Menyatu.vue";
 import Cart from "../views/Cart.vue";
 import SingleProduct from "../views/SingleProduct.vue";
 import Checkout from "../views/Checkout.vue";
-import Contact from "../views/Contact.vue"
+import Contact from "../views/Contact.vue";
+import Brand from "../views/Brand.vue";
+import Category from "../views/Category.vue";
 
 const routes = [
     {
@@ -50,10 +52,9 @@ const routes = [
         meta: { requiresLogin: true },
     },
     {
-        path: "/detail",
+        path: "/product/:id",
         name: "SingleProduct",
         component: SingleProduct,
-        meta: { requiresLogin: true },
     },
     {
         path: "/checkout",
@@ -65,6 +66,16 @@ const routes = [
         path: "/contact",
         name: "Contact",
         component: Contact,
+    },
+    {
+        path: "/all-brand",
+        name: "Brand",
+        component: Brand,
+    },
+    {
+        path: "/category",
+        name: "Category",
+        component: Category,
     },
 
 ];

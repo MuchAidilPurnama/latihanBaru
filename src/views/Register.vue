@@ -7,13 +7,13 @@
            <p class="text-sm mt-4 text-[#002D74]">If you have an account, please Register</p>
            <form  @submit.prevent="performRegister">
             <div>
-               <label class="block text-gray-700">FirstName</label>
-               <input v-model="firstname" type="text" name="name" placeholder="Enter FirstName Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" required>
+               <label class="block text-gray-700">Full Name</label>
+               <input v-model="fullname" type="text" name="name" placeholder="Enter FullName Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" required>
              </div>
 
              <div>
-               <label class="block text-gray-700">LastName</label>
-               <input v-model="lastname" type="text" name="name" placeholder="Enter LastName Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" required>
+               <label class="block text-gray-700">Email Address</label>
+               <input v-model="email" type="text" name="name" placeholder="Enter Email Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" required>
              </div>
 
              <div>
