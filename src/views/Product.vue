@@ -6,7 +6,7 @@
         Best Shoes
       </h1>
     </div>
-    <div v-for="product in getProduct" :key="product.id" class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2" >
+    <div v-for="product in getProduct.slice(0, 10)" :key="product.id" class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2" >
       <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
         <figure class="mb-2">
           <img src="https://www.adidas.co.id/media/catalog/product/cache/3bec5fdb79d91223b1a151be2b21ce8d/i/f/if3401_2_footwear_photography_side20lateral20view_grey.jpg" alt="" class="h-64 ml-auto mr-auto" />

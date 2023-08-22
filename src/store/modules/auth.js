@@ -37,6 +37,34 @@ const auth = {
                 return false;
             }
         },
+        //register
+        async register({ commit }, credentials) {
+            try {
+                const response = await axios.post(
+                    "https://ecommerce.olipiskandar.com/api/v1/auth/signup",
+                    credentials
+                );
+                const token = response.data.access_token;
+                const user = response.data.user;
+
+                //save token
+                localStorage.setItem("token", token);
+                localStorage.setItem("user", JSON.stringify(user));
+
+                commit("SET_TOKEN", token);
+                console.log("Token saved:", token);
+
+                // Implement pasreToken function
+                commit("SET_USER", user);
+                console.log(user);
+
+                return true;
+            } catch (error) {
+                console.error(error);
+                return false;
+            }
+        },
+
         logout({ commit }) {
             // Remove token from localStorage
             const token = localStorage.getItem("token");
