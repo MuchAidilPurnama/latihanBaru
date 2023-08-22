@@ -4,11 +4,11 @@ const auth = {
     namespaced: true,
     state: {
         token: localStorage.getItem("token") || "",
-        user: JSON.parse(localStorage.getItem("user")) || null,
+        loginError: null,    
     },
     getters: {
         isAuthenticated: (state) => !!state.token,
-        getUser: (state) => state.user,
+   
     },
     actions: {
         async login({ commit }, credentials) {
@@ -18,21 +18,18 @@ const auth = {
                     credentials
                 );
                 const token = response.data.access_token;
-                const user = response.data.user;
 
                 //save token
                 localStorage.setItem("token", token);
-                localStorage.setItem("user", JSON.stringify(user));
 
                 commit("SET_TOKEN", token);
+                commit("SET_LOGIN_ERROR", null);
                 console.log("Token saved:", token);
-
-                // Implement pasreToken function
-                commit("SET_USER", user);
-                console.log(user);
 
                 return true;
             } catch (error) {
+                const errorMessage = error.response.data.message || "Login failed";
+                commit("SET_LOGIN_ERROR", errorMessage);
                 console.error(error);
                 return false;
             }
@@ -45,18 +42,12 @@ const auth = {
                     credentials
                 );
                 const token = response.data.access_token;
-                const user = response.data.user;
 
                 //save token
                 localStorage.setItem("token", token);
-                localStorage.setItem("user", JSON.stringify(user));
 
                 commit("SET_TOKEN", token);
                 console.log("Token saved:", token);
-
-                // Implement pasreToken function
-                commit("SET_USER", user);
-                console.log(user);
 
                 return true;
             } catch (error) {
@@ -68,9 +59,8 @@ const auth = {
         logout({ commit }) {
             // Remove token from localStorage
             const token = localStorage.getItem("token");
-            localStorage.removeItem("user");
+            localStorage.removeItem("token")
             commit("SET_TOKEN", "");
-            commit("SET_USER", null);
             // Log token removed
             console.log("Token removed:", token);
             window.location.href = "/login";
@@ -80,8 +70,8 @@ const auth = {
         SET_TOKEN(state, token) {
             state.token = token;
         },
-        SET_USER(state, user) {
-            state.user = user;
+        SET_LOGIN_ERROR(state, error) {
+            state.loginError = error;
         }
     },
 };

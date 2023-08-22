@@ -28,6 +28,7 @@ const routes = [
         path: "/register",
         name: "Register",
         component: Register,
+        meta: { requiresGuest: true },
     },
     {
         path: "/product",
