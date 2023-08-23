@@ -4,14 +4,15 @@ const product = {
   namespaced: true,
   state: {
     productData: [],
+    cart: null,
   },
   getters: {
     getProduct: (state) => state.productData,
     //
-    getProductById: (state) => (productId) => {
-        console.log("ProductId:", productId);
+    getProductBySlug: (state) => (productSlug) => {
+        console.log("ProductSlug:", productSlug);
         console.log("ProductData:", state.productData);
-        const product = state.productData.find((p) => p.id == productId);
+        const product = state.productData.find((p) => p.slug == productSlug);
         console.log("Product:", product);
         return product;
   },
@@ -27,10 +28,10 @@ const product = {
       }
     },
     //
-    async fetchSingleProduct({ commit }, productId){
+    async fetchSingleProduct({ commit }, productSlug){
         try{
             const response = await axios.get(
-                `https://ecommerce.olipiskandar.com/api/v1/product/details/${productId}`
+                `https://ecommerce.olipiskandar.com/api/v1/product/details/${productSlug}`
             );
             commit("SET_SINGLE_PRODUCT", response.data['products']);
         }catch (error) {
@@ -39,6 +40,7 @@ const product = {
         }
     },
   },
+  
   mutations: {
     SET_PRODUCT(state, product) {
       state.productData = product;
@@ -46,6 +48,9 @@ const product = {
     SET_SINGLE_PRODUCT(state, product) {
         state.singleProduct = product;
       },
+    // SET_FILTER_PRODUCT(state, product) {
+    //   state.filterPRoduct = product;
+    // },
   },
 };
 

@@ -12,6 +12,7 @@ import Checkout from "../views/Checkout.vue";
 import Contact from "../views/Contact.vue";
 import Brand from "../views/Brand.vue";
 import Category from "../views/Category.vue";
+import Profil from "../views/Profil.vue"
 
 const routes = [
     {
@@ -49,11 +50,11 @@ const routes = [
     {
         path: "/cart",
         name: "Cart",
-        component: Cart,
+        component: () => import("../views/Cart.vue"),
         meta: { requiresLogin: true },
     },
     {
-        path: "/product/:id",
+        path: "/product/:slug",
         name: "SingleProduct",
         component: SingleProduct,
     },
@@ -77,6 +78,11 @@ const routes = [
         path: "/category",
         name: "Category",
         component: Category,
+    },
+    {
+        path: "/profil",
+        name: "Profil",
+        component: Profil,
     },
 
 ];
