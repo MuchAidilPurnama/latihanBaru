@@ -45,13 +45,11 @@ const routes = [
         path: "/menyatu",
         name: "Menyatu",
         component: Menyatu,
-        meta: { requiresLogin: true },
     },
     {
         path: "/cart",
         name: "Cart",
-        component: () => import("../views/Cart.vue"),
-        meta: { requiresLogin: true },
+        component: Cart,
     },
     {
         path: "/product/:slug",

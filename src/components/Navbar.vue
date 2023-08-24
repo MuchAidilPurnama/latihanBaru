@@ -48,21 +48,23 @@
               </li>
               <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/profil">Profile</a></li>
           </ul>
-          
 
-          <!-- <div class="hidden xl:flex items-center text-gray-600 space-x-10 items-center mr-9">
-                    <a class="flex items-center hover:text-gray-900" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                        <span class="absolute flex ml-4 -mt-5">
-                            <span class="h-3 w-3 animate-ping absolute inline-flex rounded-full bg-pink-500 opacity-75"></span>
-                            <span class="h-3 w-3 relative inline-flex rounded-full bg-pink-600"></span>
-                        </span>
-                    </a>
-                </div> -->
-          
-      <div v-if="isAuthenticated">
+                <div class="flex md:order-2">
+          <div v-if="isAuthenticated">
+            <router-link to="/cart" class="relative inline-flex items-center m-2 mr-3 px-5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-7 h-7">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+              </svg>
+
+              <div
+                class="absolute inline-flex items-center justify-center mr-4 w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">
+                2
+              </div>
+            </router-link>
+             </div>
+      <div v-if="isAuthenticated" >
         <button @click="logout" class="relative inline-block px-4 py-2 font-medium group">
 <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
 <span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
@@ -76,7 +78,9 @@
 <span class="relative text-black group-hover:text-white">Login</span>
 </a>
         </div>
-        
+        </div>
+           
+          
           
       </nav>
       <div class="navbar-menu relative z-50 hidden">
