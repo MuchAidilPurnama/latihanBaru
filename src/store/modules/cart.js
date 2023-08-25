@@ -3,10 +3,10 @@ import axios from "axios";
 const cart ={
     namespaced: true,
     state: {
-        cartData: [],
+        cart: [],
     },
     getters: {
-        getCart: (state) => state.cartData,
+        getCart: (state) => state.cart,
     },
     actions: {
         async fetchCart({ commit }) {

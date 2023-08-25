@@ -153,10 +153,15 @@
 
             <!-- counter -->
             <div class="flex items-center mt-5">
-              <button class="border rounded-md py-2 px-4 mr-2">-</button>
-              <input type="number" min="1" value="1" class="  text-center w-20 border rounded-md py-2 px-2  ">
-              <!-- <input class="h-8 w-8 border bg-white text-center text-xs outline-none" type="number" value="2" min="1"> -->
-              <button class="border rounded-md py-2 px-4 ml-2">+</button>
+              <span @click="kurang"
+                                    class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-black hover:text-yellow-50">
+                                    - </span>
+                                <span class="mr-2 ml-2">
+                                    {{ cek }}
+                                </span>
+                                <span @click="tambah"
+                                    class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-black hover:text-yellow-50">
+                                    + </span>
             </div>
 
             <div
@@ -167,7 +172,7 @@
               </div>
 
               <div v-if="token">
-                <button type="button"
+                <button @click="addToCart(product.id)" type="button"
                   class="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-gray-900 bg-none px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-800">
                   <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
@@ -259,7 +264,8 @@ import { mapGetters, mapActions} from "vuex";
 export default {
   data() {
     return {
-      token : null
+      token : null,
+      cek : 1
     }
   },
   computed: {
@@ -271,7 +277,26 @@ export default {
   methods: {
       ...mapActions("product", ["fetchSingleProduct",]),
       ...mapActions("product", ["fetchProduct"]),
+      // cart
       ...mapActions("cart",["fetchCart"]),
+      // add cart
+      async addToCart(productId) {
+        try {
+          await this.$store.dispatch('product/addToCart', productId);
+          this.fetchCart();
+        } catch (error) {
+          console.error(error);
+        }
+      },
+        tambah() {
+            this.cek++
+        },
+        kurang() {
+            if (this.cek > 1) {
+                this.cek--
+            }
+
+        }
       
   },
   beforeMount(){
@@ -280,6 +305,7 @@ export default {
   },
   mounted(){
     const productSlug = this.$route.params.slug;
+    console.log("ProductSlug:", productSlug);
     this.fetchSingleProduct(productSlug);
 
     // cek tken
