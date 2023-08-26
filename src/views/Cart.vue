@@ -13,30 +13,32 @@
             <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
             <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
           </div>
-          <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5" v-for="cart in getCart" :key="cart.cart_id">
-            <div class="flex w-2/5"> <!-- product -->
+          <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5"  v-for="cart in getCart" :key="cart.cart_id">
+            <div class="flex w-2/5" > <!-- product -->
               <div class="w-20">
                 <img class="h-24" src="https://www.adidas.co.id/media/catalog/product/cache/3bec5fdb79d91223b1a151be2b21ce8d/i/f/if3401_2_footwear_photography_side20lateral20view_grey.jpg" alt="">
               </div>
-              <div class="flex flex-col justify-between ml-4 flex-grow">
+              <div class="flex flex-col justify-between ml-4 flex-grow" >
                 <span class="font-bold text-sm">{{ cart.name }}</span>
                 <span class="text-purple-500 text-xs">Adidas</span>
-                <a href="#" class="font-semibold hover:text-purple-500 tex-t-gray-500 text-xs">Remove</a>
+                <a type="button" href="#4"  @click="removeItem(cart.cart_id)" class="font-semibold hover:text-purple-500 tex-t-gray-500 text-xs">Remove</a>
               </div>
             </div>
-            <div class="flex justify-center w-1/5">
-              <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
-              </svg>
-  
-              <input class="mx-2 border text-center w-8" type="text" value="1">
-  
-              <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
-                <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
-              </svg>
+            <div class="flex justify-center items-center w-1/5">
+              <span @click="changeQty({cartId: cart.cart_id, typeQty: 'minus'} )"
+                                    class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-black hover:text-yellow-50">
+                                    - </span>
+                                <span class="mr-3 ml-3" >
+                                    {{ cart.qty }}
+                                </span>
+                                <span @click="changeQty({cartId: cart.cart_id, typeQty: 'plus'})"
+                                    class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-black hover:text-yellow-50">
+                                    + </span>
             </div>
-            <span class="text-center w-1/5 font-semibold text-sm">$2100</span>
-            <span class="text-center w-1/5 font-semibold text-sm">$2100</span>
+            <span class="text-center w-1/5 font-semibold text-sm">Rp.{{ cart.regular_price }}</span>
+            <span class="text-center w-1/5 font-semibold text-sm">Rp.{{ totalHarga()  }}</span>
           </div>
+          
   
   
           <a href="/product" class="flex font-semibold text-purple-600 text-sm mt-10">
@@ -65,14 +67,15 @@
           <button class="bg-purple-500 hover:bg-purple-600 px-5 py-2 text-sm text-white uppercase">Apply</button>
           <div class="border-t mt-8">
             <div class="flex font-semibold justify-between py-6 text-sm uppercase">
-              <span>Total cost</span>
-              <span>$600</span>
+              <span>Total</span>
+              <span>Rp.{{ totalHarga() }}</span>
             </div>
             <a href="/checkout">
             <button  class="bg-purple-500 font-semibold hover:bg-purple-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
          </a>
         </div>
         <div>         
+
         </div>
         </div>
       </div>
@@ -83,6 +86,11 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
+  data() {
+    return {
+      cek : 1
+    }
+  },
     computed: {
         ...mapGetters('cart', ['getCart']),
     },
@@ -91,17 +99,35 @@ export default {
         ...mapActions('product', ['fetchProduct']),
         totalHarga() {
           this.total = this.getCart.reduce((acc, product) => {
-            return acc + parseFloat(product.regular_price);
+            return acc + parseFloat(product.regular_price * product.qty);
           }, 0);
           return this.total.toFixed(2);
         },
+        removeItem(cartId) {
+      this.$store.dispatch('cart/removeFromCart', cartId);
+    },
+    changeQty(cartId, typeQty) {
+      this.$store.dispatch('cart/changeQuantity', cartId, typeQty);
+    },
+        tambah() {
+            this.cek++
+        },
+        kurang() {
+            if (this.cek > 1) {
+                this.cek--
+            }
+
+        }
     },
     beforeMount() {
       this.fetchProduct();
     },
     mounted() {
         this.fetchCart();
-    }
+    },
+
+    //remove product from cart
+   
 }
 </script>
 
