@@ -7,16 +7,27 @@
        <h3 class="font-bold text-xl text-indigo-600">Aidil Jnselz</h3>
      </div>
       <div class="p-5">
-         <div class="text-sm uppercase text-indigo-600 font-bold">Resources</div>
-         <a class="my-3 block" href="/#">Documentation <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a> 
+         <div class="text-sm uppercase text-indigo-600 font-bold">Icons</div>
+         <a class="my-3 block" href="/#">Air Force 1 <span class="text-teal-600 text-xs p-1"></span></a>
+         <a class="my-3 block" href="/#">Huarache <span class="text-teal-600 text-xs p-1"></span></a>
+         <a class="my-3 block" href="/#">Air Max 95 <span class="text-teal-600 text-xs p-1"></span></a>
+         <a class="my-3 block" href="/#">Air Max 90 <span class="text-teal-600 text-xs p-1">New</span></a> 
       </div>
       <div class="p-5">
-         <div class="text-sm uppercase text-indigo-600 font-bold">Support</div>
-         <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a> 
+         <div class="text-sm uppercase text-indigo-600 font-bold">Shoes</div>
+         <a class="my-3 block" href="/#">All Shoes <span class="text-teal-600 text-xs p-1"></span></a>
+         <a class="my-3 block" href="/#">Adidas Shoes <span class="text-teal-600 text-xs p-1"></span></a>
+         <a class="my-3 block" href="/#">Jordan Shoes <span class="text-teal-600 text-xs p-1"></span></a> 
+         <a class="my-3 block" href="/#">Running Shoes <span class="text-teal-600 text-xs p-1"></span></a> 
       </div>
       <div class="p-5">
-         <div class="text-sm uppercase text-indigo-600 font-bold">Contact us</div>
-         <a class="my-3 block" href="/#">Aidil, S ukamenak jl.pasawahan, ID <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">contact@company.com <span class="text-teal-600 text-xs p-1"></span></a> 
+         <div class="text-sm uppercase text-indigo-600 font-bold">Clothing</div> 
+         <a class="my-3 block" href="/#">Shorts <span class="text-teal-600 text-xs p-1"></span></a> 
+         <a class="my-3 block" href="/#">Hoodie <span class="text-teal-600 text-xs p-1"></span></a> 
+         <a class="my-3 block" href="/#">jackets <span class="text-teal-600 text-xs p-1"></span></a>
+         <a class="my-3 block" href="/#">All Clothing <span class="text-teal-600 text-xs p-1"></span></a>
+         
+        
       </div>
    </div>
 </div>

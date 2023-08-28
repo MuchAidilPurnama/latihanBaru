@@ -6,11 +6,12 @@ const auth = {
         token: localStorage.getItem("token") || "",
         loginError: null,
         user: JSON.stringify(localStorage.getItem("user") || null),
+        userAddress: [],
     },
     getters: {
         isAuthenticated: (state) => !!state.token,
         getUser: (state) => state.user,
-        getUserAddress: (state) => state.userAddress,
+        getterUserAddress: (state) => state.userAddress,
    
     },
     actions: {
@@ -73,7 +74,7 @@ const auth = {
                 return null;
             }
         },
-        async getUserAddress({ state }) {
+        async getUserAddress({ state, commit }) {
             try {
                 const response = await axios.get(
                     "https://ecommerce.olipiskandar.com/api/v1/user/addresses", 
@@ -83,6 +84,7 @@ const auth = {
                         }
                     }
                 );
+                commit("SET_ADDRESS", response.data)
               return response.data;
             } catch (error) {
                 console.error(error);
@@ -110,6 +112,9 @@ const auth = {
         },
         SET_USER(state, user) {
             state.user = user;
+        },
+        SET_ADDRESS(state, address) {
+            state.userAddress = address
         },
     },
 };

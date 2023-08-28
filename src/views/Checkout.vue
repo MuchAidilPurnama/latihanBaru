@@ -215,6 +215,7 @@ export default {
   },
   computed: {
       ...mapGetters('cart', ['getCart']),
+      ...mapGetters('cart', ['getCheckout']),
 
   },
   methods: {

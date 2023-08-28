@@ -9,7 +9,7 @@ const order = {
         getOrder: (state) => state.orderData,
     },
     actions: {
-        async fetchOrder({ commit }) {
+        async fetchOrder({ commit },  orderCode) {
             try {
                 const responseOrder = await axios.get(
                     `https://ecommerce.olipiskandar.com/api/v1/user/order/${orderCode}`,
@@ -19,11 +19,11 @@ const order = {
                       },
                     }
                 );
-                commit('SET_ORDER', responseOrder.data['data']);
-                console.log(responseOrder.data);
-              } catch (error) {
-                console.error(error);
-                alert(error);
+                commit('SET_ORDER',responseOrder.data['data']);
+        console.log(responseOrder.data);
+      } catch (error) {
+        console.error(error);
+        alert(error);
             }
         },
 

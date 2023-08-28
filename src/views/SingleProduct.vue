@@ -133,21 +133,21 @@
                 <p
                   class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
                   White</p>
-                <span class="mt-1 block text-center text-xs">Rp.{{ product.base_price }}</span>
+                
               </label>
               <label class="">
                 <input type="radio" name="subscription" value="8 Months" class="peer sr-only" checked />
                 <p
                   class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
                   Black</p>
-                <span class="mt-1 block text-center text-xs">Rp.{{ product.base_price}}</span>
+                
               </label>
               <label class="">
                 <input type="radio" name="subscription" value="12 Months" class="peer sr-only" />
                 <p
                   class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
                   Red</p>
-                <span class="mt-1 block text-center text-xs">Rp.{{ product.base_price }}</span>
+                
               </label>
             </div>
 
@@ -236,12 +236,12 @@
             </div>
 
             <div class="mt-8 flow-root sm:mt-12">
-              <h1 class="text-3xl font-bold">Delivered To Your Door</h1>
-              <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia accusantium nesciunt fuga.</p>
-              <h1 class="mt-8 text-3xl font-bold">From the Fine Farms of Brazil</h1>
-              <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio numquam enim facere.</p>
-              <p class="mt-4">Amet consectetur adipisicing elit. Optio numquam enim facere. Lorem ipsum dolor sit amet
-                consectetur, adipisicing elit. Dolore rerum nostrum eius facere, ad neque.</p>
+              <h1 class="text-3xl font-bold">THE CLASSIC LOOK AND <br> FEEL OF THE AUTHENTIC SAMBA.</h1>
+              <p class="mt-4">Born on the pitch, the Samba is a timeless icon of street style. <br> These shoes stay true to their legacy with a soft <br> leather upper and suede overlays.</p>
+              <h1 class="mt-8 text-3xl font-bold">SUEDE T-TOE DESIGNl</h1>
+              <p class="mt-2">The authentic Samba look.</p>
+              <h1 class="mt-8 text-3xl font-bold">TEXTURED RUBBER CUPSOLE</h1>
+              <p class="mt-4">With pivot point inspired by football heritage.</p>
                
             </div>
           </div>

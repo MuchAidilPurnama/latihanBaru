@@ -1,18 +1,23 @@
 <template>
     <br>
-     <h1 class="text-center b" style="font: 3em sans-serif; font-family: 'Times New Roman', Times, serif;" >All Brand</h1><br>
-        <div class="grid grid-cols-4 gap-5">
-            <div class=" flex flex-container" v-for="brand in getBrand.data">
- <div class="mx-auto mt-11 w-80 transform overflow-hidden rounded-lg bg-white dark:bg-slate-800 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
-  <img class="h-48 w-full object-cover object-center" :src="brand.logo" alt="Product Image" />
-  <div class="p-4">
-    <h2 class="mb-2 text-lg font-medium dark:text-white text-gray-900">{{ brand.slug }}</h2>
-    <p class="mb-2 text-base dark:text-gray-300 text-gray-700">{{ brand.name }}</p>
+    <div style='background-color:rgba(0, 0, 0, 0)'>
+<div class="container max-w-7xl mx-auto px-4" style="cursor: auto;">
 
+  <div class="flex flex-wrap " >
+    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" v-for="brand in getBrand.data">
+      <div class="px-6">
+        <img alt="John Doe" :src="brand.logo" class="rounded-xl shadow-lg max-w-full h-auto align-middle border-none undefined">
+        <div class="pt-6 text-center">
+      <h1 class="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">{{ brand.name }}</h1>
+          <p class="text-blue-gray-700 text-base font-light leading-relaxed mt-0 mb-4">{{ brand.slug }}</p>
+          <div class="flex items-center justify-center">
+          </div>
+        </div>
+      </div>
+    </div> 
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
 </template>
 
 <script>

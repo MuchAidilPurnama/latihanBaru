@@ -34,7 +34,7 @@
 <span class="px-3.5 py-2 text-white bg-purple-500 group-hover:bg-purple-600 flex items-center justify-center">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
 </span>
-<span class="pl-4 pr-5 py-2.5">Button Text</span>
+<span class="pl-4 pr-5 py-2.5">Explore More</span>
 </a>
         </div>
 </div>
@@ -42,29 +42,29 @@
 
 </section>
 
-<h1 Align="center" class="bold-font">BEST OF ADIDAS</h1>
+<h1 Align="center" class="font-bold">BEST OF ADIDAS</h1>
 <div class="flex flex-container m-4">
 <div class="max-w bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2">
     <a href="#">
-        <img class="rounded-t-lg" src="https://www.adidas.co.id/media/catalog/product/cache/3bec5fdb79d91223b1a151be2b21ce8d/h/p/hp3268_2_footwear_photography_side20lateral20view_grey.jpg" alt="" />
+        <img class="rounded-t-lg" src="https://assets.adidas.com/images/w_600,f_auto,q_auto/d01d2ca3d73e4ac29d37ad8d00fc2953_9366/LA_Trainer_Shoes_Black_B23707_01_standard.jpg" alt="" />
     </a>
 </div>
 
 <div class="max-w bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2">
     <a href="#">
-        <img class="rounded-t-lg" src="https://www.adidas.co.id/media/catalog/product/cache/3bec5fdb79d91223b1a151be2b21ce8d/i/g/ig8978_2_footwear_photography_side20lateral20view_grey.jpg" alt="" />
+        <img class="rounded-t-lg" src="https://assets.adidas.com/images/w_600,f_auto,q_auto/97f86eede1374615a058a81700a27444_9366/Gazelle_Shoes_Black_CQ2809_01_standard.jpg" alt="" />
     </a>
 </div>
 
 <div class="max-w bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2">
     <a href="#">
-        <img class="rounded-t-lg" src="https://www.adidas.co.id/media/catalog/product/cache/3bec5fdb79d91223b1a151be2b21ce8d/h/p/hp6443_2_footwear_photography_side_lateral_view_grey.jpg" alt="" />
+        <img class="rounded-t-lg" src="https://assets.adidas.com/images/w_600,f_auto,q_auto/12f4c77dc8fb4254b403c67b46a23c7c_9366/LA_Trainer_Shoes_White_ID4663_01_standard.jpg" alt="" />
     </a>
 </div>
 
 <div class="max-w bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2">
     <a href="#">
-        <img class="rounded-t-lg" src="https://www.adidas.co.id/media/catalog/product/cache/3bec5fdb79d91223b1a151be2b21ce8d/g/x/gx8931_2_footwear_photography_side_lateral_view_grey.jpg" alt="" />
+        <img class="rounded-t-lg" src="https://assets.adidas.com/images/w_600,f_auto,q_auto/f4c6d97de5604197b2fb83c8d26558c4_9366/LA_Trainer_Shoes_Blue_ID4632_01_standard.jpg" alt="" />
     </a>
 </div>
 </div>

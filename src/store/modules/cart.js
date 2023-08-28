@@ -4,9 +4,11 @@ const cart ={
     namespaced: true,
     state: {
         cart: [],
+        dataCheckout: [],
     },
     getters: {
         getCart: (state) => state.cart,
+        getCheckout: (state) => state.dataCheckout,
     },
     actions: {
         async fetchCart({ commit }) {
@@ -81,6 +83,7 @@ const cart ={
           );
           console.log(response.data.message);
           dispatch("fetchCart");
+          commit('SET_CHECKOUT', response.data);
         } catch (error) {
           alert("Error");
           console.log(error);
@@ -114,6 +117,9 @@ const cart ={
         SET_CART(state, cart) {
             state.cart = cart;
         },
+        SET_CHECKOUT(state, checkout) {
+            state.dataCheckout = checkout;
+          },
     },
 };
 
