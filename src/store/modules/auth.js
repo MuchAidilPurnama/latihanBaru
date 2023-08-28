@@ -10,6 +10,7 @@ const auth = {
     getters: {
         isAuthenticated: (state) => !!state.token,
         getUser: (state) => state.user,
+        getUserAddress: (state) => state.userAddress,
    
     },
     actions: {
@@ -67,6 +68,22 @@ const auth = {
                     }
                 );
               return response.data.user;
+            } catch (error) {
+                console.error(error);
+                return null;
+            }
+        },
+        async getUserAddress({ state }) {
+            try {
+                const response = await axios.get(
+                    "https://ecommerce.olipiskandar.com/api/v1/user/addresses", 
+                    {
+                        headers: {
+                            Authorization: `Bearer ${state.token}`
+                        }
+                    }
+                );
+              return response.data;
             } catch (error) {
                 console.error(error);
                 return null;

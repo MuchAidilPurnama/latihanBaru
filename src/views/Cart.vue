@@ -35,8 +35,8 @@
                                     class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-black hover:text-yellow-50">
                                     + </span>
             </div>
-            <span class="text-center w-1/5 font-semibold text-sm">Rp.{{ cart.regular_price }}</span>
-            <span class="text-center w-1/5 font-semibold text-sm">Rp.{{ totalHarga()  }}</span>
+            <span class="text-center w-1/5 font-semibold text-sm">Rp.{{ cart.regular_price * cart.qty}}</span>
+            <span class="text-center w-1/5 font-semibold text-sm">Rp.{{  cart.regular_price * cart.qty  }}</span>
           </div>
           
   
@@ -70,10 +70,9 @@
               <span>Total</span>
               <span>Rp.{{ totalHarga() }}</span>
             </div>
-            <a href="/checkout">
+            <router-link to="/checkout">
             <button  class="bg-purple-500 font-semibold hover:bg-purple-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
-         </a>
-        </div>
+         </router-link>    </div>
         <div>         
 
         </div>
