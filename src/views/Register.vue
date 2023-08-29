@@ -38,25 +38,25 @@
                 </p>
                 <form  @submit.prevent="performRegister" class="sm:w-2/3 w-full px-4 lg:px-0 mx-auto">
                   <div class="pb-2 pt-4">
-                        <input v-model="name" type="text" name="name" id="name" placeholder="Name" class="block w-full p-4 text-lg rounded-sm bg-black">
+                        <input v-model="name" type="text" name="name" id="name" placeholder="Name" class="block w-full p-4 text-lg rounded-sm bg-black" required>
                     </div>
                     <div class="pb-2 pt-4">
-                        <input v-model="email" type="text" name="email" id="email" placeholder="Email" class="block w-full p-4 text-lg rounded-sm bg-black">
+                        <input v-model="email" type="text" name="email" id="email" placeholder="Email" class="block w-full p-4 text-lg rounded-sm bg-black" required>
                     </div>
                     <div class="pb-2 pt-4">
-                        <input v-model="phone" type="number" name="phone" id="phone" placeholder="phone" class="block w-full p-4 text-lg rounded-sm bg-black">
+                        <input v-model="phone" type="number" name="phone" id="phone" placeholder="phone" class="block w-full p-4 text-lg rounded-sm bg-black" required>
                     </div>
                     <div class="pb-2 pt-4">
-                        <input v-model="password" type="number" name="password" id="password" placeholder="password" class="block w-full p-4 text-lg rounded-sm bg-black">
+                        <input v-model="password" type="number" name="password" id="password" placeholder="password" class="block w-full p-4 text-lg rounded-sm bg-black" required>
                     </div>
                     <div class="pb-2 pt-4">
-                        <input v-model="confirm_password" type="number" name="confirm_password" id="confirm_password" placeholder="confirm_password" class="block w-full p-4 text-lg rounded-sm bg-black">
+                        <input v-model="confirm_password" type="number" name="confirm_password" id="confirm_password" placeholder="confirm_password" class="block w-full p-4 text-lg rounded-sm bg-black" required>
                     </div>
                     <div class="text-right text-gray-400 hover:underline hover:text-gray-100">
                         <a href="#">Forgot your password?</a>
                     </div>
                     <div class="px-4 pb-2 pt-4">
-                        <button class="uppercase block w-full p-4 text-lg rounded-full bg-indigo-500 hover:bg-indigo-600 focus:outline-none">sign in</button>
+                        <button class="uppercase block w-full p-4 text-lg rounded-full bg-indigo-500 hover:bg-indigo-600 focus:outline-none">Register</button>
                     </div>
                     
 

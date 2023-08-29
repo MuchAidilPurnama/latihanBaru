@@ -65,7 +65,7 @@
           </div>
 
           <div class="lg:col-span-2 lg:row-span-2 lg:row-end-2">
-            <h1 class="sm: text-2xl font-bold text-gray-900 sm:text-3xl">{{ product.name }}</h1>
+            <h3 class="sm: text-2xl font-bold text-gray-900 sm:text-3xl">{{ product.name }}</h3>
             <span>{{ product.slug }}</span>
 
             <div class="mt-5 flex items-center">
@@ -104,7 +104,7 @@
               <p class="ml-2 text-sm font-medium text-gray-500">1,209 Reviews</p>
             </div>
 
-            <h2 class="mt-8 text-base text-gray-900">Shoes size</h2>
+            <h3 class="mt-8 text-base text-gray-900">Shoes size</h3>
             <div class="mt-3 flex select-none flex-wrap items-center gap-1">
               <label class="">
                 <input type="radio" name="type" value="Powder" class="peer sr-only" checked />
@@ -126,7 +126,7 @@
               </label>
             </div>
 
-            <h2 class="mt-8 text-base text-gray-900">Color</h2>
+            <h3 class="mt-8 text-base text-gray-900">Color</h3>
             <div class="mt-3 flex select-none flex-wrap items-center gap-1">
               <label class="">
                 <input type="radio" name="subscription" value="4 Months" class="peer sr-only" />
@@ -167,7 +167,7 @@
             <div
               class="mt-10 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
               <div class="flex items-end">
-                <h1 class="text-3xl font-bold">Rp.{{ product.base_price }}</h1>
+                <h4 class="text-3xl font-bold">Rp.{{ product.base_price }}</h4>
                 <span class="text-base">/item</span>
               </div>
 
@@ -236,11 +236,11 @@
             </div>
 
             <div class="mt-8 flow-root sm:mt-12">
-              <h1 class="text-3xl font-bold">THE CLASSIC LOOK AND <br> FEEL OF THE AUTHENTIC SAMBA.</h1>
+              <h4 class="text-3xl font-bold">THE CLASSIC LOOK AND <br> FEEL OF THE AUTHENTIC SAMBA.</h4>
               <p class="mt-4">Born on the pitch, the Samba is a timeless icon of street style. <br> These shoes stay true to their legacy with a soft <br> leather upper and suede overlays.</p>
-              <h1 class="mt-8 text-3xl font-bold">SUEDE T-TOE DESIGNl</h1>
+              <h4 class="mt-8 text-3xl font-bold">SUEDE T-TOE DESIGNl</h4>
               <p class="mt-2">The authentic Samba look.</p>
-              <h1 class="mt-8 text-3xl font-bold">TEXTURED RUBBER CUPSOLE</h1>
+              <h4 class="mt-8 text-3xl font-bold">TEXTURED RUBBER CUPSOLE</h4>
               <p class="mt-4">With pivot point inspired by football heritage.</p>
                
             </div>

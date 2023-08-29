@@ -1,23 +1,12 @@
 <template>
-<section class="text-gray-700 body-font">
-  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Nature Martt
-      </h1>
-      <p class="mb-8 leading-relaxed">Kami menyediakan berbagai fashion yang lagi trend pada zaman sekarang .</p>
-      <div class="flex justify-center">
-        <a href="/menyatu" class="relative inline-block px-4 py-2 font-medium group">
-<span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-<span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-<span class="relative text-black group-hover:text-white">Learn more</span>
-</a>
-      </div>
-    </div>
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img style="width: 85%;" class="object-cover object-center rounded" alt="hero" src="https://image.ibb.co/faAuO9/adidas_originals_logo.jpg">
-    </div>
+<header id="home">
+  <div class="text-box">
+    <h1>NATURE MART</h1>
+    <p>Find out why we have the best nuts in the US</p>
+    <a class="btn" href="/category">Categories</a>
+    <a class="btn" href="/menyatu">Shop Now</a>
   </div>
-</section>
+</header>
 <section class="text-gray-700 body-font border-t border-gray-200">
   <div class="container px-5 py-24 mx-auto flex flex-wrap">
     <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
@@ -28,13 +17,13 @@
         
         </div>
         <div class="flex-grow" style="text-align: start;"><br> <br> <br> <br>
-          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">INDEPENDENCE DAY <br> EXTRA 17% OFF</h2>
-          <p class="leading-relaxed text-base">Deals no to be missed! Get moving before your favourites are gone</p>
+          <h3 class="text-gray-900 text-lg title-font font-medium mb-3">INDEPENDENCE DAY <br> EXTRA 17% OFF</h3>
+          <p class="leading-relaxed text-base font-justify">Deals no to be missed! Get moving before your favourites are gone</p>
           <a href="/menyatu" class="inline-flex overflow-hidden text-white bg-gray-900 rounded group">
 <span class="px-3.5 py-2 text-white bg-purple-500 group-hover:bg-purple-600 flex items-center justify-center">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
 </span>
-<span class="pl-4 pr-5 py-2.5">Explore More</span>
+<span class="pl-4 pr-5 py-2.5 " >Explore More</span>
 </a>
         </div>
 </div>
@@ -42,7 +31,7 @@
 
 </section>
 
-<h1 Align="center" class="font-bold">BEST OF ADIDAS</h1>
+<h2 Align="center" class="font-bold">BEST OF ADIDAS</h2>
 <div class="flex flex-container m-4">
 <div class="max-w bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2">
     <a href="#">
@@ -74,5 +63,112 @@
 </template>
 
 <style>
+header {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://cdn.dribbble.com/users/2181562/screenshots/13827776/media/768037d20cfb3601d7add0f00b427da7.jpg?resize=768x576&vertical=center);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
 
+.text-box {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+h1 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 250%;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/*-----BUTTON ------*/
+.btn:link,
+.btn:visited,
+input[type=submit] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  border-radius: 150px;
+   -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background: #ee8478;
+  border: 2px solid #eb685a;
+  color: #fff; 
+  font-size: 90%;
+  margin-right: 20px;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #eb685a;
+  color: #fff;
+  transition: 0.3s;
+}
+
+/*----------- FEATURE SECTION -------*/
+
+.section-features {
+  text-align: center;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  font-style: bold;
+  letter-spacing: 1px;
+  color: #b23528;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #fad7d3;
+  content: "";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #9aa4a5;
+}
+
+.icon-p {
+  margin-top: 30px;
+  font-size: 250%;
+  color: #ed7669;
+}
 </style>

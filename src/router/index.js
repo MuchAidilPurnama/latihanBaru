@@ -20,6 +20,7 @@ const routes = [
         path: "/",
         name: "Home",
         component: Home,
+        meta: { requiresLogin: true },
     },
     {
         path: "/login",
@@ -51,6 +52,7 @@ const routes = [
         path: "/cart",
         name: "Cart",
         component: Cart,
+        meta: { requiresLogin: true },
         
     },
     {
@@ -83,6 +85,7 @@ const routes = [
         path: "/profil",
         name: "Profil",
         component: Profil,
+        meta: { requiresLogin: true },
     },
     {
         path: "/order/:orderCode",
